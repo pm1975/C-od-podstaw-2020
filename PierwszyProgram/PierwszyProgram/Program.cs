@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PierwszyProgram
 {
@@ -6,31 +7,17 @@ namespace PierwszyProgram
     {
         static void Main(string[] args)
         {
-            var napis1 = "Kurs";
-            var napis2 = "programowania";
+            var lista = new List<int>();
 
-            var liczba1 = 5;
-            var liczba2 = 5;
+            lista.Add(int.Parse(Console.ReadLine()));
+            lista.Add(int.Parse(Console.ReadLine()));
 
-            if (liczba1 == liczba2)
-            {
-                Console.WriteLine(napis1 + " " + napis2);
-            }
-            else
-            {
-                Console.WriteLine("Jesteśmy po ifie");
-            }
 
-            Console.WriteLine("Podaj liczby");
-
-            var liczba11 = int.Parse(Console.ReadLine());
-            var liczba12 = int.Parse(Console.ReadLine());
-
-            if (liczba11 > liczba12)
+            if (lista[0] > lista[1])
             {
                 Console.WriteLine("Liczba1 jest większa");
             }
-            else if (liczba11 < liczba12)
+            else if (lista[0] < lista[1])
             {
                 Console.WriteLine("Liczba1 jest mniejsza");
             }
