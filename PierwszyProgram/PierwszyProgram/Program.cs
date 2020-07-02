@@ -6,16 +6,25 @@ namespace PierwszyProgram
     {
         static void Main(string[] args)
         {
-            var nazwa1 = 5;
-            var nazwa2 = "Kurs programowania C#";
+            double liczba1 = 15;
+            var liczba2 = 8;
+            var suma = liczba1 + liczba2;
+            var roznica = liczba1 - liczba2;
+            var mnozenie = liczba1 * liczba2;
+            var dzielenie = liczba1 / liczba2;
+            var modulo = liczba1 % liczba2;
 
-            var nazwa3 = 5.3;
+            Console.WriteLine(suma);
+            Console.WriteLine(roznica);
+            Console.WriteLine(mnozenie);
+            Console.WriteLine(dzielenie);
+            Console.WriteLine(modulo);
 
-            nazwa1 = 7;
-            nazwa2 = "Drugi kurs";
+            var napis1 = "Kurs";
+            var napis2 = "programowania";
 
-            Console.WriteLine(nazwa1);
-            Console.WriteLine(nazwa2);
+            Console.WriteLine(napis1 + " " + napis2);
+
         }
     }
 }
