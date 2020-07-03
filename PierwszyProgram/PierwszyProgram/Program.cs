@@ -24,9 +24,9 @@ namespace PierwszyProgram
             Console.WriteLine(5);
         }
 
-        private static int PodwojLiczbe(int liczba)
+        private static string PodwojLiczbe(int liczba)
         {
-            return liczba * 2;
+            return (liczba * 2).ToString();
         }
 
         private static int PodwojLiczbe1(out int liczba)
