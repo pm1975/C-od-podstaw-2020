@@ -7,31 +7,20 @@ namespace PierwszyProgram
     {
         static void Main(string[] args)
         {
-            var lista = new List<int>();
+            NazwaFunkcji();
+            var liczba = 8;
+            var liczba2 = PodwojLiczbe(liczba);
+            Console.WriteLine(liczba2);
+        }
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    lista.Add(int.Parse(Console.ReadLine()));
-            //}
+        private static void NazwaFunkcji()
+        {
+            Console.WriteLine(5);
+        }
 
-            //while (lista.Count > 0)
-            //{
-            //    lista.RemoveAt(0);
-            //}
-
-            //do
-            //{
-
-            //} while (lista.Count > 0);
-
-            lista.Add(5);
-            lista.Add(3);
-            lista.Add(7);
-
-            foreach (var item in lista)
-            {
-                Console.WriteLine(item);
-            }
+        private static int PodwojLiczbe(int liczba)
+        {
+            return liczba * 2;
         }
     }
 }
