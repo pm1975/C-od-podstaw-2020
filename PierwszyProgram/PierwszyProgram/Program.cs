@@ -9,23 +9,29 @@ namespace PierwszyProgram
         {
             var lista = new List<int>();
 
-            lista.Add(int.Parse(Console.ReadLine()));
-            lista.Add(int.Parse(Console.ReadLine()));
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    lista.Add(int.Parse(Console.ReadLine()));
+            //}
 
+            //while (lista.Count > 0)
+            //{
+            //    lista.RemoveAt(0);
+            //}
 
-            if (lista[0] > lista[1])
-            {
-                Console.WriteLine("Liczba1 jest większa");
-            }
-            else if (lista[0] < lista[1])
-            {
-                Console.WriteLine("Liczba1 jest mniejsza");
-            }
-            else
-            {
-                Console.WriteLine("Takie same liczby");
-            }
+            //do
+            //{
 
+            //} while (lista.Count > 0);
+
+            lista.Add(5);
+            lista.Add(3);
+            lista.Add(7);
+
+            foreach (var item in lista)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
