@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP
+namespace OOP.Classes
 {
-    class Lamp
+    class Lamp : Item
     {
-        private int Height { get; set; }
         private int Power { get; set; }
 
         public void LightItself()
