@@ -6,7 +6,7 @@ namespace OOP.Classes
 {
     class Lamp : Item
     {
-        private int Power { get; set; }
+        public int Power { get; set; }
 
         public void LightItself()
         {

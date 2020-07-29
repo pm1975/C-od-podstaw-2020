@@ -1,10 +1,13 @@
 ﻿using OOP.Classes;
+using OOP.Files;
 using System;
+using System.IO;
 
 namespace OOP
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -15,7 +18,15 @@ namespace OOP
 
             Lamp myLamp2 = new Lamp(300, 150);
 
-            myLamp.LightItself();
+            myLamp2.LightItself();
+
+            var fileManager = new FileManager();
+
+            fileManager.SaveLamp(myLamp);
+
+            var databaseManager = new DatabaseManager();
+
+            databaseManager.SaveLamp(myLamp);
         }
     }
 
