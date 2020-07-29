@@ -1,23 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace PierwszyProgram
 {
     class Program
     {
+        enum Number
+        {
+            Even,
+            Odd
+        }
         static void Main(string[] args)
         {
-            // namber of days in a week
-            var number = 5d;
-            var list = new List<int>();
+            var number = int.Parse(Console.ReadLine());
 
-            var dictionary = new Dictionary<string, int>();
+            var numberType = (Number)(number % 2);
 
-            var date = new DateTime(2020, 7, 13, 14, 38, 0);          
+            Console.WriteLine(numberType.ToString());
 
-            Console.WriteLine(date.Date);
-            Console.WriteLine(date.ToLongDateString());
-
+            /*
+            var reminder = number % 2;
+            if (reminder == 0)
+            {
+                Console.WriteLine("Parzysta");
+            }
+            else
+            {
+                Console.WriteLine("Nieparzysta");
+            }
+            */
         }
     }
 }
