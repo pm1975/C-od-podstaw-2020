@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OOP.Files
 {
-    class FileManager
+    class FileManager : IManager
     {
         public void SaveLamp(Lamp lamp)
         {

@@ -5,11 +5,11 @@ using System.Text;
 
 namespace OOP.Files
 {
-    class DatabaseManager : IManager
+    class CloudManager : IManager
     {
         public void SaveLamp(Lamp lamp)
         {
-            // kod do bazy danych
+            // implementacja
         }
     }
 }

@@ -7,7 +7,10 @@ namespace OOP
 {
     class Program
     {
-
+        public static IManager GetManager()
+        {
+            return new FileManager();
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -20,13 +23,9 @@ namespace OOP
 
             myLamp2.LightItself();
 
-            var fileManager = new FileManager();
+            var manager = GetManager();
 
-            fileManager.SaveLamp(myLamp);
-
-            var databaseManager = new DatabaseManager();
-
-            databaseManager.SaveLamp(myLamp);
+            manager.SaveLamp(myLamp);
         }
     }
 
