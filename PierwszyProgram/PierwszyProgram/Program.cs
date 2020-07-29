@@ -6,30 +6,20 @@ namespace PierwszyProgram
 {
     class Program
     {
-        enum Number
+        enum Priority
         {
-            Even,
-            Odd
+            One = 1,
+            Two,
+            Three,
+            Four,
+            Five
         }
         static void Main(string[] args)
         {
-            var number = int.Parse(Console.ReadLine());
+            var priority = Priority.Three;
 
-            var numberType = (Number)(number % 2);
+            Console.WriteLine(priority.ToString());
 
-            Console.WriteLine(numberType.ToString());
-
-            /*
-            var reminder = number % 2;
-            if (reminder == 0)
-            {
-                Console.WriteLine("Parzysta");
-            }
-            else
-            {
-                Console.WriteLine("Nieparzysta");
-            }
-            */
         }
     }
 }
