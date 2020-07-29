@@ -8,13 +8,20 @@ namespace PierwszyProgram
     {
         static void Main(string[] args)
         {
-            var variable = 5;
-            string nameOfVariable = nameof(variable);
+            var variable = default(DateTime);
 
-            var type = typeof(DateTime);
-            type.GetMethods();
+            if (true)
+            {
+                variable = new DateTime();
+            }
+            else
+            {
+                variable = new DateTime(2);
+            }
 
-            Console.WriteLine(nameOfVariable);
+            variable = default(DateTime);
+
+            Console.WriteLine(variable);
 
         }
     }
