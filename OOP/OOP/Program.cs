@@ -8,29 +8,14 @@ namespace OOP
         {
             Console.WriteLine("Hello World!");
 
-            Lamp myLamp = new Lamp();
-            myLamp.Height = 200;
-            myLamp.Power = 100;
+            Lamp myLamp = new Lamp(200, 100);
 
             myLamp.LightItself();
 
-            Lamp myLamp2 = new Lamp();
-            myLamp.Height = 300;
-            myLamp.Power = 150;
+            Lamp myLamp2 = new Lamp(300, 150);
 
             myLamp.LightItself();
         }
     }
 
-    class Lamp
-    {
-        public int Height { get; set; }
-        public int Power { get; set; }
-
-        public void LightItself()
-        {
-            Console.WriteLine(Height);
-            Console.WriteLine(Power);
-        }
-    }
 }
