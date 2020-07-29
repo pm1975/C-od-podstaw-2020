@@ -8,23 +8,29 @@ namespace OOP
         {
             Console.WriteLine("Hello World!");
 
-            MyClass myClassObject = new MyClass();
+            Lamp myLamp = new Lamp();
+            myLamp.Height = 200;
+            myLamp.Power = 100;
 
-            myClassObject.Function2();
-            MyClass.Function1();
+            myLamp.LightItself();
+
+            Lamp myLamp2 = new Lamp();
+            myLamp.Height = 300;
+            myLamp.Power = 150;
+
+            myLamp.LightItself();
         }
     }
 
-    class MyClass
+    class Lamp
     {
-        public static void Function1()
+        public int Height { get; set; }
+        public int Power { get; set; }
+
+        public void LightItself()
         {
-
-        }
-
-        public void Function2()
-        {
-
+            Console.WriteLine(Height);
+            Console.WriteLine(Power);
         }
     }
 }
