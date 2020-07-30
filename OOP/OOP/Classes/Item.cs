@@ -6,6 +6,6 @@ namespace OOP.Classes
 {
     abstract class Item
     {
-        public int Height { get; private set; }
+        public int Height { get; protected set; }
     }
 }
