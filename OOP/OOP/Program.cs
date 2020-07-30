@@ -2,6 +2,8 @@
 using OOP.Files;
 using System;
 using System.IO;
+using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 
 namespace OOP
 {
@@ -13,19 +15,44 @@ namespace OOP
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var calculator = new Calculator<int>();
 
-            Lamp myLamp = new Lamp(200, 100);
+            Console.WriteLine("Wpisz proszę dwie liczby oddzielone enterem: ");
+            var firstNumber = int.Parse(Console.ReadLine());
+            var secondNumber = int.Parse(Console.ReadLine());
 
-            myLamp.LightItself();
+            Console.WriteLine("Wpisz proszę działanie, które chcesz wykonać");
+            Console.WriteLine("Dostępne działania to: + - * /");
 
-            Lamp myLamp2 = new Lamp(300, 150);
+            var operation = Console.ReadLine();
 
-            myLamp2.LightItself();
+            var result = default(int);
 
-            var manager = GetManager();
+            switch (operation)
+            {
+                case "+":
+                    {
+                        result = calculator.Add(firstNumber, secondNumber);
+                    }
+                    break;
+                case "-":
+                    {
+                        result = calculator.Substract(firstNumber, secondNumber);
+                    }
+                    break;
+                case "*":
+                    {
+                        result = calculator.Multiply(firstNumber, secondNumber);
+                    }
+                    break;
+                case "/":
+                    {
+                        result = calculator.Divide(firstNumber, secondNumber);
+                    }
+                    break;
+            }
 
-            manager.SaveLamp(myLamp);
+            Console.WriteLine(result);
         }
     }
 
