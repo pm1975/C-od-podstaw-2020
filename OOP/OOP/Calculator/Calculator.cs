@@ -6,6 +6,30 @@ namespace OOP
 {
     class Calculator<T>
     {
+        public Calculator()
+        {
+            var example = default(T);
+            var isInt = (example is int);
+            var isFloat = (example is float);
+            var isDouble = (example is double);
+            if (isInt)
+            {
+
+            }
+            else if (isFloat)
+            {
+
+            }
+            else if (isDouble)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Zainicjowano kalkulator niepoprawnie");
+            }
+        }
+
         public T Add(T first, T second)
         {
             dynamic firstNumber = first;

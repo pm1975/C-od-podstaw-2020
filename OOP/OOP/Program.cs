@@ -1,9 +1,5 @@
-﻿using OOP.Classes;
-using OOP.Files;
+﻿using OOP.Files;
 using System;
-using System.IO;
-using System.Net.Http.Headers;
-using System.Runtime.CompilerServices;
 
 namespace OOP
 {
@@ -15,18 +11,18 @@ namespace OOP
         }
         static void Main(string[] args)
         {
-            var calculator = new Calculator<int>();
+            var calculator = new Calculator<double>();
 
             Console.WriteLine("Wpisz proszę dwie liczby oddzielone enterem: ");
-            var firstNumber = int.Parse(Console.ReadLine());
-            var secondNumber = int.Parse(Console.ReadLine());
+            var firstNumber = double.Parse(Console.ReadLine());
+            var secondNumber = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Wpisz proszę działanie, które chcesz wykonać");
             Console.WriteLine("Dostępne działania to: + - * /");
 
             var operation = Console.ReadLine();
 
-            var result = default(int);
+            var result = default(double);
 
             switch (operation)
             {
