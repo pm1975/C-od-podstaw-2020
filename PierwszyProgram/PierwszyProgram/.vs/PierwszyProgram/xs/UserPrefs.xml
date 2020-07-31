@@ -1,17 +1,14 @@
-﻿<Properties StartupConfiguration="{C837457D-9C99-4769-90ED-E5CA38C4F9F6}|Default">
+﻿<Properties StartupConfiguration="{6A36C8AD-98C2-4DCC-ADC9-EFE06D22AD1C}|Default">
   <MonoDevelop.Ide.ItemProperties.PierwszyProgram PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PierwszyProgram/Program.cs">
     <Files>
-      <File FileName="PierwszyProgram/Program.cs" Line="7" Column="24" />
+      <File FileName="PierwszyProgram/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PierwszyProgram" expanded="True">
             <Node name="PierwszyProgram" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-              </Node>
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
