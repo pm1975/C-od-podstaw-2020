@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace PierwszyProgram
 {
@@ -6,46 +7,37 @@ namespace PierwszyProgram
     {
         static void Main(string[] args)
         {
-            //double liczba = 8.12312;
-            //NazwaFunkcji();
-            //var liczba2 = PodwojLiczbe(PrzekonwertujDoubleNaInta(liczba));
-            //Console.WriteLine(liczba2);
-            var liczba = 5;
-            Console.WriteLine(liczba);
-            Console.WriteLine(PodwojLiczbe(liczba));
-            Console.WriteLine(liczba);
-            Console.WriteLine(PodwojLiczbe1(out liczba));
-            Console.WriteLine(liczba);
+            var filePath = "imiona.txt";
 
-        }
-
-        private static void NazwaFunkcji()
-        {
-            Console.WriteLine(5);
-        }
-
-        private static string PodwojLiczbe(int liczba)
-        {
-            return (liczba * 2).ToString();
-        }
-
-        private static int PodwojLiczbe1(out int liczba)
-        {
-            liczba = 2;
-            return liczba * 2;
-        }
-
-        private static int PrzekonwertujDoubleNaInta(double liczba)
-        {
-            if (int.TryParse(liczba.ToString(), out int liczba2))
+            // Sprawdź, czy mamy jakieś nazwisko zapisane
+            if (File.Exists(filePath))
             {
-                return liczba2;
-            }
-            else
-            {
-                return 0;
-            }
-        }
+                string fileContent = File.ReadAllText(filePath);
+                if (fileContent.Length > 0)
+                {
+                    // Jeśli tak, wypisujemy i pytamy o usunięcie
+                    Console.WriteLine("Imie zapisane to: " + fileContent);
+                    Console.WriteLine("Czy chcesz usunąć to imię?");
 
+                    var userAnswer = Console.ReadLine();
+                    if (userAnswer == "Tak")
+                    {
+                        // Jeśli usunął, wczytujemy nowe
+                        File.Delete(filePath);
+                    }
+                    else
+                    {
+                        // Jeśli nie usunął, kończymy program
+                        return;
+                    }
+                }
+            }
+
+            // Jeśli nie, wczytujemy i zapisujemy
+            Console.WriteLine("Podaj proszę swoje imię: ");
+            var userName = Console.ReadLine();
+
+            File.WriteAllText(filePath, userName);
+        }
     }
 }
