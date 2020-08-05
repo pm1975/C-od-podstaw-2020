@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{F2944512-CDDA-44D1-9A64-8D29E5724F24}|Default">
   <MonoDevelop.Ide.ItemProperties.OOP PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OOP/Calculator/Calculator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OOP/Program.cs">
     <Files>
-      <File FileName="OOP/Program.cs" Line="3" Column="1" />
-      <File FileName="OOP/Calculator/Calculator.cs" Line="1" Column="1" />
+      <File FileName="OOP/Program.cs" Line="25" Column="40" />
+      <File FileName="OOP/Calculator/Calculator.cs" Line="29" Column="73" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OOP" expanded="True">
             <Node name="OOP" expanded="True">
-              <Node name="Calculator" expanded="True">
-                <Node name="Calculator.cs" selected="True" />
-              </Node>
+              <Node name="Calculator" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
